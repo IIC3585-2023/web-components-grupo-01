@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite + Lit + TS</title>
+  <link rel="stylesheet" href="./index.css" />
+  <script type="module" src="/lit-components/myElement.ts"></script>
+  <script type="module" src="/lit-components/sellItem.ts"></script>
+  <script type="module" src="/web-componets/treeElement.ts"></script>
+</head>
+
+<body>
+  <div class="">
+    <my-element class="">
+      <h1>Vite + Lit</h1>
+    </my-element>
+    <div class="grid-container">
+      <sell-item class="grid-item" title="James Burger"
+        imgSrc="https://statics-cuidateplus.marca.com/cms/styles/natural/azblob/hamburguesas.jpg.webp?itok=4airsSTm"
+        price="8500" discount="15" rating="4"></sell-item>
+      <sell-item class="grid-item" title="Tacos Ruz"
+        imgSrc="https://cantinasalonflorida.com/wp-content/uploads/2019/10/190926_los-13-tacos-mas-famosos-y-sabrosos-en-la-dieta-de-nosotros-los-mexicanos__Cantina-Salon-Florida.jpg"
+        price="10000" discount="5" rating="5"></sell-item>
+    </div>
+    <div>
+      <tree-item>
+        Motores de Bases de Datos
+        <tree-item>
+          Relacionales
+          <tree-item>
+            Open Source
+            <tree-item> MySQL </tree-item>
+            <tree-item> PostgreSQL </tree-item>
+          </tree-item>
+          <tree-item>
+            Propietarios
+            <tree-item> Oracle </tree-item>
+            <tree-item> SQL Server </tree-item>
+          </tree-item>
+        </tree-item>
+        <tree-item>
+          NoSQL
+          <tree-item>
+            Modelo Documentos
+            <tree-item> MongoDB </tree-item>
+            <tree-item> CouchDB </tree-item>
+          </tree-item>
+          <tree-item>
+            Modelo Grafos
+            <tree-item> Neo4J </tree-item>
+            <tree-item> SparQL </tree-item>
+          </tree-item>
+        </tree-item>
+      </tree-item>
+    </div>
+  </div>
+
+</body>
+
+</html>
