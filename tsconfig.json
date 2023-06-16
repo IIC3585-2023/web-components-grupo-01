@@ -23,6 +23,7 @@
     "noFallthroughCasesInSwitch": true
   },
   "include": [
+    "lib",
     "lit-components",
     "web-components"
   ]

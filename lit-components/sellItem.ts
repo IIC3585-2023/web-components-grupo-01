@@ -12,7 +12,7 @@ export class SellItem extends LitElement {
 
   constructor() {
     super();
-    this.title = 'Submarino BV';
+    this.title = '';
     this.imgSrc = '';
     this.price = 0;
     this.discount = 0;
@@ -31,16 +31,28 @@ export class SellItem extends LitElement {
     };
   }
 
-  renderStars() {
+  @property({ type: Number })
+  count = 0;
+
+  firstUpdated() {
+    this.count = this.rating;
+  }
+
+  private _onClick() {
+    console.log('click', this.count);
+    this.count++
+  }
+
+  private renderStars() {
     return this.stars = '⭐'.repeat(this.rating);
   }
 
-  setDiscount(price: number, discount: number) {
+  private setDiscount(price: number, discount: number) {
     return price * (1 - discount / 100);
   }
 
-  toChileanCurrency(price: number) {
-    return price.toLocaleString("es-CL", {style:"currency", currency:"CLP"});
+  private toChileanCurrency(price: number) {
+    return price.toLocaleString("es-CL", { style: "currency", currency: "CLP" });
   }
 
 
@@ -77,6 +89,9 @@ export class SellItem extends LitElement {
           ${this.rating}
           </strong>
         </span>
+        <button @click=${this._onClick} part="button">
+        ❤️ ${this.count}
+        </button>
       
       </div>
     `;
