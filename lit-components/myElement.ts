@@ -12,12 +12,6 @@ import viteLogo from '/vite.svg'
 @customElement('my-element')
 export class MyElement extends LitElement {
   /**
-   * Copy for the read the docs hint.
-   */
-  @property()
-  docsHint = 'Click on the Vite and Lit logos to learn more'
-
-  /**
    * The number of times the button has been clicked.
    */
   @property({ type: Number })
@@ -26,20 +20,16 @@ export class MyElement extends LitElement {
   render() {
     return html`
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src=${viteLogo} class="logo" alt="Vite logo" />
-        </a>
         <a href="https://lit.dev" target="_blank">
-          <img src=${litLogo} class="logo lit" alt="Lit logo" />
+          <img src="/SportsComponents2.png" class="logo lit" alt="Lit logo" />
         </a>
       </div>
-      <slot></slot>
+      <slot class"bv"></slot>
       <div class="card">
         <button @click=${this._onClick} part="button">
           count is ${this.count}
         </button>
       </div>
-      <p class="read-the-docs">${this.docsHint}</p>
     `
   }
 
@@ -53,16 +43,14 @@ export class MyElement extends LitElement {
       margin: 0 auto;
       padding: 2rem;
       text-align: center;
+      color: white;
     }
 
     .logo {
-      height: 6em;
+      height: 10em;
       padding: 1.5em;
       will-change: filter;
       transition: filter 300ms;
-    }
-    .logo:hover {
-      filter: drop-shadow(0 0 2em #646cffaa);
     }
     .logo.lit:hover {
       filter: drop-shadow(0 0 2em #325cffaa);
@@ -98,6 +86,7 @@ export class MyElement extends LitElement {
       font-weight: 500;
       font-family: inherit;
       background-color: #1a1a1a;
+      color: white;
       cursor: pointer;
       transition: border-color 0.25s;
     }
