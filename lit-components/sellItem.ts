@@ -92,7 +92,7 @@ export class SellItem extends LitElement {
         <button @click=${this._onClick} part="button">
         ❤️ ${this.count}
         </button>
-      
+        <rating-component rating="${this.rating}"></rating-component>
       </div>
     `;
   }
