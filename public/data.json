@@ -1,0 +1,267 @@
+{
+  "name": "Restaurant Food",
+  "children": [
+    {
+      "name": "Foreign Cuisine",
+      "children": [
+        {
+          "name": "Italian",
+          "children": [
+            {
+              "name": "Pasta"
+            },
+            {
+              "name": "Pizza"
+            },
+            {
+              "name": "Risotto"
+            }
+          ]
+        },
+        {
+          "name": "Mexican",
+          "children": [
+            {
+              "name": "Tacos",
+              "products": [
+                {
+                  "title": "Tacos Ruz",
+                  "imgSrc": "https://cantinasalonflorida.com/wp-content/uploads/2019/10/190926_los-13-tacos-mas-famosos-y-sabrosos-en-la-dieta-de-nosotros-los-mexicanos__Cantina-Salon-Florida.jpg",
+                  "price": "10000",
+                  "discount": "5",
+                  "rating": "5"
+                }
+              ]
+            },
+            {
+              "name": "Burritos"
+            },
+            {
+              "name": "Enchiladas"
+            }
+          ]
+        },
+        {
+          "name": "Chinese",
+          "children": [
+            {
+              "name": "Dumplings"
+            },
+            {
+              "name": "Fried Rice"
+            },
+            {
+              "name": "Kung Pao Chicken"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Burgers",
+      "children": [
+        {
+          "name": "Beef Burgers",
+          "children": [
+            {
+              "name": "Classic Burger"
+            },
+            {
+              "name": "Cheeseburger"
+            },
+            {
+              "name": "Bacon Burger",
+              "products": [
+                {
+                  "title": "James Burger",
+                  "imgSrc": "https://statics-cuidateplus.marca.com/cms/styles/natural/azblob/hamburguesas.jpg.webp?itok=4airsSTm",
+                  "price": "8500",
+                  "discount": "15",
+                  "rating": "4"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Chicken Burgers",
+          "children": [
+            {
+              "name": "Grilled Chicken Burger"
+            },
+            {
+              "name": "Spicy Chicken Burger"
+            },
+            {
+              "name": "BBQ Chicken Burger"
+            }
+          ]
+        },
+        {
+          "name": "Vegetarian Burgers",
+          "children": [
+            {
+              "name": "Veggie Burger"
+            },
+            {
+              "name": "Black Bean Burger"
+            },
+            {
+              "name": "Portobello Mushroom Burger"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Appetizers",
+      "children": [
+        {
+          "name": "Salads",
+          "children": [
+            {
+              "name": "Caesar Salad",
+              "products": [
+                {
+                  "title": "Yadran Cesar",
+                  "imgSrc": "https://www.gourmet.cl/wp-content/uploads/2016/09/Ensalada_C%C3%A9sar-web.jpg",
+                  "price": "6000",
+                  "discount": "10",
+                  "rating": "3"
+                }
+              ]
+            },
+            {
+              "name": "Greek Salad"
+            },
+            {
+              "name": "Caprese Salad"
+            }
+          ]
+        },
+        {
+          "name": "Soups",
+          "children": [
+            {
+              "name": "Tomato Soup"
+            },
+            {
+              "name": "Chicken Noodle Soup"
+            },
+            {
+              "name": "Clam Chowder"
+            }
+          ]
+        },
+        {
+          "name": "Starters",
+          "children": [
+            {
+              "name": "Bruschetta"
+            },
+            {
+              "name": "Spring Rolls"
+            },
+            {
+              "name": "Stuffed Mushrooms"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Main Dishes",
+      "children": [
+        {
+          "name": "Beef",
+          "children": [
+            {
+              "name": "Steak"
+            },
+            {
+              "name": "Beef Stew"
+            },
+            {
+              "name": "Beef Tacos"
+            }
+          ]
+        },
+        {
+          "name": "Chicken",
+          "children": [
+            {
+              "name": "Roasted Chicken"
+            },
+            {
+              "name": "Chicken Parmesan"
+            },
+            {
+              "name": "Lemon Garlic Chicken"
+            }
+          ]
+        },
+        {
+          "name": "Seafood",
+          "children": [
+            {
+              "name": "Grilled Salmon"
+            },
+            {
+              "name": "Shrimp Scampi"
+            },
+            {
+              "name": "Lobster Bisque"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Desserts",
+      "children": [
+        {
+          "name": "Cakes",
+          "children": [
+            {
+              "name": "Chocolate Cake"
+            },
+            {
+              "name": "Red Velvet Cake"
+            },
+            {
+              "name": "Carrot Cake"
+            }
+          ]
+        },
+        {
+          "name": "Ice Cream",
+          "children": [
+            {
+              "name": "Vanilla"
+            },
+            {
+              "name": "Chocolate"
+            },
+            {
+              "name": "Strawberry"
+            }
+          ]
+        },
+        {
+          "name": "Pies",
+          "children": [
+            {
+              "name": "Apple Pie"
+            },
+            {
+              "name": "Pumpkin Pie"
+            },
+            {
+              "name": "Key Lime Pie"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -3,9 +3,12 @@ export default class TreeItem extends HTMLElement {
   $children: HTMLSlotElement | null;
   $button: HTMLButtonElement | null;
   title: string;
+  handleClick: Function | null;
 
   constructor() {
     super();
+    // this.handleClick = null;
+
     this._shadowRoot = this.attachShadow({ mode: "open" });
     this.setCSS();
 
@@ -17,6 +20,11 @@ export default class TreeItem extends HTMLElement {
 
     firstChild.textContent = "";
     this.$button!.addEventListener("click", this.showChildren.bind(this));
+
+    this.$button!.addEventListener("click", () => {
+      if (this.handleClick)
+        this.handleClick(this.$button!.innerText);
+    });
   }
 
   showChildren() {
@@ -32,17 +40,18 @@ export default class TreeItem extends HTMLElement {
           flex-direction: column;
           background: #11101d;
           color: white;
+          cursor: pointer;
         }
-
+      
         .button-container {
           display: flex;
           align-items: center;
-          cursor: pointer;
         }
+      
         .button-container:hover {
           background-color: gray;
         }
-        
+      
         #menu-button {
           all: unset;
           cursor: pointer;
@@ -51,13 +60,12 @@ export default class TreeItem extends HTMLElement {
           align-items: center;
           flex-direction: row;
         }
-
+      
         slot {
           display: none;
         }
-
       </style>
-
+      
       <div class="menu-container">
         <div class="button-container">
           <button id="menu-button"></button>

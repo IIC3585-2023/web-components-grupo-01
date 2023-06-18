@@ -9,6 +9,7 @@ export class SellItem extends LitElement {
   discount: number;
   rating: number;
   stars: string;
+  types: string;
 
   constructor() {
     super();
@@ -18,6 +19,7 @@ export class SellItem extends LitElement {
     this.discount = 0;
     this.rating = 4;
     this.stars = '⭐';
+    this.types = '';
   }
 
   static get properties(): PropertyDeclarations {
@@ -28,6 +30,7 @@ export class SellItem extends LitElement {
       discount: { type: Number },
       rating: { type: Number },
       stars: { type: String },
+      types: { type: String },
     };
   }
 
@@ -40,6 +43,7 @@ export class SellItem extends LitElement {
 
   private _onClick() {
     console.log('click', this.count);
+    console.log('click', this.types);
     this.count++
   }
 
