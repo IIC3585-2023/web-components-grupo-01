@@ -1,7 +1,7 @@
 import { LitElement, PropertyDeclarations, unsafeCSS, html } from 'lit'
 import { customElement } from 'lit/decorators.js'
 
-import style from './sellItem.css?inline';
+import style from './assets/sellItem.css?inline';
 
 
 @customElement('sell-item')
