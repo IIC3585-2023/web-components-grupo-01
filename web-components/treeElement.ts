@@ -24,7 +24,7 @@ export class TreeItem extends HTMLElement {
       this.showChildren();
     });
 
-    this.$button!.addEventListener("click", () => {
+    this.addEventListener("click", () => {
       if (this.handleClick)
         this.handleClick(this.$button!.innerText);
     });
