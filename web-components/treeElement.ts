@@ -1,25 +1,28 @@
-export default class TreeItem extends HTMLElement {
+export class TreeItem extends HTMLElement {
   _shadowRoot: ShadowRoot | null;
   $children: HTMLSlotElement | null;
   $button: HTMLButtonElement | null;
-  title: string;
   handleClick: Function | null;
 
   constructor() {
     super();
-    // this.handleClick = null;
-
-    this._shadowRoot = this.attachShadow({ mode: "open" });
+    this._shadowRoot = this.attachShadow({ mode: "closed" });
     this.setCSS();
+    this.handleClick = null;
 
     this.$children = this._shadowRoot.querySelector("slot");
     this.$button = this._shadowRoot.querySelector("button");
 
     const firstChild = this.$children?.assignedNodes()[0] as Text;
+    
     this.$button!.innerText = firstChild?.textContent?.trim() || "";
 
     firstChild.textContent = "";
-    this.$button!.addEventListener("click", this.showChildren.bind(this));
+
+    this.addEventListener("click", (event) => {
+      event.stopPropagation();
+      this.showChildren();
+    });
 
     this.$button!.addEventListener("click", () => {
       if (this.handleClick)
@@ -35,14 +38,14 @@ export default class TreeItem extends HTMLElement {
     this._shadowRoot!.innerHTML = `
       <style>
         .menu-container {
-          margin-left: 20px;
+          padding-left: 20px;
           opacity: 0.9;
           flex-direction: column;
           background: #11101d;
           color: white;
           cursor: pointer;
         }
-      
+
         .button-container {
           display: flex;
           align-items: center;
@@ -76,4 +79,11 @@ export default class TreeItem extends HTMLElement {
   }
 }
 
+
 customElements.define('tree-item', TreeItem);
+
+declare global {
+  interface HTMLElementTagNameMap {
+    'tree-item': TreeItem
+  }
+}

@@ -1,5 +1,8 @@
-import { LitElement, PropertyDeclarations, css, html } from 'lit'
-import { customElement, property } from 'lit/decorators.js'
+import { LitElement, PropertyDeclarations, unsafeCSS, html } from 'lit'
+import { customElement } from 'lit/decorators.js'
+
+import style from './sellItem.css?inline';
+
 
 @customElement('sell-item')
 export class SellItem extends LitElement {
@@ -34,23 +37,6 @@ export class SellItem extends LitElement {
     };
   }
 
-  @property({ type: Number })
-  count = 0;
-
-  firstUpdated() {
-    this.count = this.rating;
-  }
-
-  private _onClick() {
-    console.log('click', this.count);
-    console.log('click', this.types);
-    this.count++
-  }
-
-  private renderStars() {
-    return this.stars = '⭐'.repeat(this.rating);
-  }
-
   private setDiscount(price: number, discount: number) {
     return price * (1 - discount / 100);
   }
@@ -65,7 +51,7 @@ export class SellItem extends LitElement {
       <div class="container">
       
         <div class="img-container">
-          <img id="product-image" src=${this.imgSrc} alt="No Image" />
+          <img id="product-image" class="rounded" src=${this.imgSrc} alt="" />
         </div>
       
         <h4 class="title">
@@ -86,89 +72,14 @@ export class SellItem extends LitElement {
             -${this.discount}%
           </span>
         </div>
-      
-        <span>
-          ${this.renderStars()}
-          <strong>
-          ${this.rating}
-          </strong>
-        </span>
-        <button @click=${this._onClick} part="button">
-        ❤️ ${this.count}
-        </button>
+
         <rating-component rating="${this.rating}"></rating-component>
       </div>
     `;
   }
 
   static get styles() {
-    return css`
-    :host {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 2rem;
-      text-align: center;
-    }
-    .container {
-      background-color: white;
-      border: 1px solid lightgray;
-      border-radius: 8px;
-      font-size: 12px;
-      font-color: black;
-      min-height: 35ch;
-      margin: 0rem;
-      padding: 1em 1em 0.25em;
-      transition: 100ms linear;
-      width: 25ch;
-    }
-    .container:hover {
-      scale: 1.05;
-    }
-  
-    img {
-      max-width: 100%;
-      max-height: 100px;
-    }
-    
-    .img-container {
-      align-items: center;
-      display: flex;
-      padding: 5%
-      justify-content: center;
-      max-width: 100%;
-    }
-  
-    .price-box {
-      align-items: center;
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 1em;
-    }
-  
-    .sale-price {
-      color: tomato;
-      margin: 0;
-      width: fit-content;
-    }
-  
-    .normal-price {
-      color: gray;
-      margin: 0;
-      text-decoration: line-through;
-      width: fit-content;
-    }
-  
-    .discount-tag {
-      align-items: center;
-      background-color: tomato;
-      border-radius: 4px;
-      color: white;
-      font-weight: bold;
-      height: 50%;
-      justify-content: center;
-      padding: 4px;
-      width: fit-content;
-    }`;
+    return unsafeCSS(style);
   }
 }
 

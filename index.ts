@@ -1,25 +1,28 @@
-import TreeItem from "./web-componets/treeElement";
-import SellItem from "./lit-componets/sellItem";
+import "./styles.css"
+
+// import "./web-components/index"
+import "./lit-components/index"
+
+import type { TreeItem } from "./web-components/treeElement";
+import type { SellItem } from "./lit-components/index";
 
 const treeItems: TreeItem[] = []
 const sellItems: SellItem[] = []
 
-/**
- * @template {HTMLElementKey} T
- * @param {HTMLElement} parent
- * @param {T} element
- * @param {((el: HTMLElementTagNameMap[T]) => void) | undefined} fn
- **/
-function appendNode(parent: HTMLElement, element, fn) {
+type HTMLElementKey = keyof HTMLElementTagNameMap;
+
+function appendNode<T extends HTMLElementKey>(parent: HTMLElement, element: T, fn: ((el: HTMLElementTagNameMap[T]) => void) | undefined) {
   const el = document.createElement(element);
   parent.appendChild(el);
   if (fn) fn(el);
   return el;
 }
 
-function addItemToTree(tree: TreeItem | null, item: any, types: string = "") {
+function addItemToTree(tree: HTMLElement, item: any, types: string = "") {
   if (!tree) return;
+
   appendNode(tree, "tree-item", (el) => {
+
     el.textContent = item.name;
     treeItems.push(el);
     // console.log(treeItems);
@@ -49,9 +52,7 @@ function addProductToMenu(product: any, types: string) {
 }
 
 function showProductsByTypes(currentType: string) {
-  // console.log(currentType);
-  const products = sellItems;
-  products.forEach((product) => {
+  sellItems.forEach((product) => {
     const types = product.types!.split(";");
     if (
       types.includes(currentType)
@@ -63,19 +64,21 @@ function showProductsByTypes(currentType: string) {
   });
 }
 
-async function getInfo() {
-  const response = await fetch("public/data.json");
+document.addEventListener("DOMContentLoaded", async () => {
+  const response = await fetch("data.json");
   const json = await response.json();
-  const tree: TreeItem | null = document.querySelector("#tree");
+  const tree: HTMLDivElement = document.querySelector("#tree")!;
   if (response.ok) {
     addItemToTree(tree, json)
   } else {
-    console.log("error");
+    console.log("error :(");
   }
+
+  // que wea BV
+  await import("./web-components/index");
+
   treeItems.forEach((treeItem) => {
     treeItem.handleClick = showProductsByTypes;
   });
   return [];
-}
-
-getInfo();
+});

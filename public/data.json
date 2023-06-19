@@ -8,10 +8,35 @@
           "name": "Italian",
           "children": [
             {
-              "name": "Pasta"
+              "name": "Pasta",
+              "products": [
+                {
+                  "title": "Lasgna Muñoz",
+                  "imgSrc": "https://www.recetasdesbieta.com/wp-content/uploads/2018/10/lasagna-original..jpg",
+                  "price": 7500,
+                  "discount": 7,
+                  "rating": 4
+                },
+                {
+                  "title": "Spaghetti Cabrera",
+                  "imgSrc": "https://www.cookingclassy.com/wp-content/uploads/2012/11/spaghetti+with+meat+sauce11.jpg",
+                  "price": 6500,
+                  "discount": 5,
+                  "rating": 3
+                }
+              ]
             },
             {
-              "name": "Pizza"
+              "name": "Pizza",
+              "products": [
+                {
+                  "title": "Pizza Herskovic",
+                  "imgSrc": "https://w6h5a5r4.rocketcdn.me/wp-content/uploads/2019/06/pizza-con-chorizo-jamon-y-queso-1080x671.jpg",
+                  "price": 14000,
+                  "discount": 25,
+                  "rating": 4
+                }
+              ]
             },
             {
               "name": "Risotto"
@@ -27,14 +52,23 @@
                 {
                   "title": "Tacos Ruz",
                   "imgSrc": "https://cantinasalonflorida.com/wp-content/uploads/2019/10/190926_los-13-tacos-mas-famosos-y-sabrosos-en-la-dieta-de-nosotros-los-mexicanos__Cantina-Salon-Florida.jpg",
-                  "price": "10000",
-                  "discount": "5",
-                  "rating": "5"
+                  "price": 10000,
+                  "discount": 5,
+                  "rating": 5
                 }
               ]
             },
             {
-              "name": "Burritos"
+              "name": "Burritos",
+              "products": [
+                {
+                  "title": "Burritos Soto",
+                  "imgSrc": "https://i.blogs.es/5ac783/como-hacer-burritos-de-carne-2-/1366_2000.jpg",
+                  "price": 8000,
+                  "discount": 10,
+                  "rating": 4
+                }
+              ]
             },
             {
               "name": "Enchiladas"
@@ -45,7 +79,16 @@
           "name": "Chinese",
           "children": [
             {
-              "name": "Dumplings"
+              "name": "Dumplings",
+              "products": [
+                {
+                  "title": "Dumplings Arenas",
+                  "imgSrc": "https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcRYbSGhfJ1M3zkq2EaY-DNyiLkWS9Ov4BgnrKzr3gHPpPbtUkNSkmoNPuRWrckThEgP",
+                  "price": 4000,
+                  "discount": 10,
+                  "rating": 3
+                }
+              ]
             },
             {
               "name": "Fried Rice"
@@ -73,11 +116,11 @@
               "name": "Bacon Burger",
               "products": [
                 {
-                  "title": "James Burger",
+                  "title": "Navon Burger",
                   "imgSrc": "https://statics-cuidateplus.marca.com/cms/styles/natural/azblob/hamburguesas.jpg.webp?itok=4airsSTm",
-                  "price": "8500",
-                  "discount": "15",
-                  "rating": "4"
+                  "price": 8500,
+                  "discount": 15,
+                  "rating": 4
                 }
               ]
             }
@@ -87,7 +130,16 @@
           "name": "Chicken Burgers",
           "children": [
             {
-              "name": "Grilled Chicken Burger"
+              "name": "Grilled Chicken Burger",
+              "products": [
+                {
+                  "title": "Grilled Sandoval Chicken",
+                  "imgSrc": "https://simply-delicious-food.com/wp-content/uploads/2022/06/Grilled-chicken-burgers2.jpg",
+                  "price": 6000,
+                  "discount": 10,
+                  "rating": 3
+                }
+              ]
             },
             {
               "name": "Spicy Chicken Burger"
@@ -101,7 +153,16 @@
           "name": "Vegetarian Burgers",
           "children": [
             {
-              "name": "Veggie Burger"
+              "name": "Veggie Burger",
+              "products": [
+                {
+                  "title": "Veggie Dunstan",
+                  "imgSrc": "https://www.thespruceeats.com/thmb/S3bw6OQYOHY2lfEHhdHn1U6wW_M=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/vegan-mushroom-bean-burger-recipe-3378623-13_preview1-5b241897fa6bcc0036d2c9bf.jpeg",
+                  "price": 6000,
+                  "discount": 10,
+                  "rating": 3
+                }
+              ]
             },
             {
               "name": "Black Bean Burger"
@@ -125,9 +186,9 @@
                 {
                   "title": "Yadran Cesar",
                   "imgSrc": "https://www.gourmet.cl/wp-content/uploads/2016/09/Ensalada_C%C3%A9sar-web.jpg",
-                  "price": "6000",
-                  "discount": "10",
-                  "rating": "3"
+                  "price": 6000,
+                  "discount": 10,
+                  "rating": 3
                 }
               ]
             },
@@ -146,7 +207,16 @@
               "name": "Tomato Soup"
             },
             {
-              "name": "Chicken Noodle Soup"
+              "name": "Chicken Noodle Soup",
+              "products": [
+                {
+                  "title": "Nussbaum Soup",
+                  "imgSrc": "https://bodegagarzon.com/wp-content/uploads/2015/07/sopa-Maridaje.jpg",
+                  "price": 6000,
+                  "discount": 4,
+                  "rating": 1
+                }
+              ]
             },
             {
               "name": "Clam Chowder"
@@ -176,7 +246,16 @@
           "name": "Beef",
           "children": [
             {
-              "name": "Steak"
+              "name": "Steak",
+              "products": [
+                {
+                  "title": "Washuuu Neshem",
+                  "imgSrc": "https://images-gmi-pmc.edge-generalmills.com/b57ee35f-bce2-4229-8bf5-19b97876a4cb.jpg",
+                  "price": 20000,
+                  "discount": 20,
+                  "rating": 5
+                }
+              ]
             },
             {
               "name": "Beef Stew"
@@ -223,7 +302,16 @@
           "name": "Cakes",
           "children": [
             {
-              "name": "Chocolate Cake"
+              "name": "Chocolate Cake",
+              "products": [
+                {
+                  "title": "Choc Mery",
+                  "imgSrc": "https://www.finedininglovers.com/sites/g/files/xknfdk626/files/Original_3482_StockFood-00268045cut.jpg",
+                  "price": 8000,
+                  "discount": 20,
+                  "rating": 2
+                }
+              ]
             },
             {
               "name": "Red Velvet Cake"

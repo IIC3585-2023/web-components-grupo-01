@@ -1,11 +1,18 @@
+@config "./tailwind.config.js";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
+  padding: theme("padding.4");
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
   /* color: rgba(255, 255, 255, 0.87); */
-  background-color: #242424;
+  background-color: theme("colors.gray.800");
   /* #030037 */
 
   font-synthesis: none;
@@ -18,6 +25,7 @@
 h1 {
   color: #646cff;
 }
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -44,17 +52,33 @@ a:hover {
 }
 
 .big-container {
-  display: grid;
-  grid-template-columns: 1fr 3fr; /* Proportions of 1:3 */
+  display: flex;
+  flex-direction: column;
+  gap: theme("gap.4")
 }
 
-.grid-container {
+#tree {
+  flex-shrink: 0;
+  width: theme("width.96");
+  max-width: 100%;
+}
+
+#menu {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  height: fit-content;
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1rem;
+  padding: theme("padding.4");
+  margin: 0 auto;
 }
 
-.grid-item {
-  /* background-color: #e2e8f0; */
-  padding: 1rem;
+.grid-item:hover {
+  scale: 1.05;
+}
+
+@media screen(sm) {
+  .big-container {
+    flex-direction: row;
+  }
 }
