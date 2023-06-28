@@ -94,7 +94,16 @@
               "name": "Fried Rice"
             },
             {
-              "name": "Kung Pao Chicken"
+              "name": "Ramen",
+              "products": [
+                {
+                  "title": "Ramen Killua",
+                  "imgSrc": "https://www.recetasnestle.cl/sites/default/files/styles/recipe_detail_desktop/public/srh_recipes/d6593ab8d7bf06ec32e9defec8892810.jpg?itok=ZWrfkZhA",
+                  "price": 5000,
+                  "discount": 10,
+                  "rating": 5
+                }
+              ]
             }
           ]
         }
@@ -269,7 +278,16 @@
           "name": "Chicken",
           "children": [
             {
-              "name": "Roasted Chicken"
+              "name": "Roasted Chicken",
+              "products": [
+                {
+                  "title": "Reutter Wings",
+                  "imgSrc": "https://www.simplyrecipes.com/thmb/m1LB58rp40jNA5L7_6O3IJkj4Cc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Grilled-BBQ-Chicken-LEAD-10-03fd9892eaae4ce1a8a3f4c949657cfd.jpg",
+                  "price": 8000,
+                  "discount": 20,
+                  "rating": 4
+                }
+              ]
             },
             {
               "name": "Chicken Parmesan"
@@ -286,7 +304,16 @@
               "name": "Grilled Salmon"
             },
             {
-              "name": "Shrimp Scampi"
+              "name": "Shrimp Scampi",
+              "products":[
+                {
+                  "title": "Shrimp Soto",
+                  "imgSrc": "https://www.allrecipes.com/thmb/jiV_4f8vXFle1RdFLgd8-_31J3M=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/229960-shrimp-scampi-with-pasta-DDMFS-4x3-e065ddef4e6d44479d37b4523808cc23.jpg",
+                  "price": 16000,
+                  "discount": 20,
+                  "rating": 4
+                }
+              ]
             },
             {
               "name": "Lobster Bisque"
@@ -325,7 +352,16 @@
           "name": "Ice Cream",
           "children": [
             {
-              "name": "Vanilla"
+              "name": "Vanilla",
+              "products": [
+                {
+                  "title": "Vanilla Baier",
+                  "imgSrc": "https://www.gourmet.cl/wp-content/uploads/2016/09/Helado_Vainilla-web-553x458.jpg",
+                  "price": 3000,
+                  "discount": 15,
+                  "rating": 4
+                }
+              ]
             },
             {
               "name": "Chocolate"
@@ -339,7 +375,16 @@
           "name": "Pies",
           "children": [
             {
-              "name": "Apple Pie"
+              "name": "Apple Pie",
+              "products": [
+                {
+                  "title": "Apple Pie Parra",
+                  "imgSrc": "https://www.sbs.com.au/food/sites/sbs.com.au.food/files/mmie_1019_applepie_h.jpg",
+                  "price": 6000,
+                  "discount": 6,
+                  "rating": 2
+                }
+              ]
             },
             {
               "name": "Pumpkin Pie"
