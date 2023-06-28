@@ -23,6 +23,13 @@
                   "price": 6500,
                   "discount": 5,
                   "rating": 3
+                },
+                {
+                  "title": "Conchiquesos",
+                  "imgSrc": "https://comidaschilenas.com/wp-content/uploads/2021/07/Receta-de-caracoquesos-caseros.jpg",
+                  "price": 4500,
+                  "discount": 5,
+                  "rating": 3
                 }
               ]
             },
@@ -258,7 +265,7 @@
               "name": "Steak",
               "products": [
                 {
-                  "title": "Washuuu Neshem",
+                  "title": "Wagyu Neshem",
                   "imgSrc": "https://images-gmi-pmc.edge-generalmills.com/b57ee35f-bce2-4229-8bf5-19b97876a4cb.jpg",
                   "price": 20000,
                   "discount": 20,
