@@ -1,5 +1,5 @@
 export class TreeItem extends HTMLElement {
-  _shadowRoot: ShadowRoot | null;
+  _shadowRoot: ShadowRoot;
   $children: HTMLSlotElement | null;
   $button: HTMLButtonElement | null;
   handleClick: Function | null;
@@ -7,31 +7,33 @@ export class TreeItem extends HTMLElement {
   constructor() {
     super();
     this._shadowRoot = this.attachShadow({ mode: "closed" });
-    this.setCSS();
+    this.$children = null;
+    this.$button = null;
     this.handleClick = null;
+  }
+
+  connectedCallback() {
+    this.setCSS();
 
     this.$children = this._shadowRoot.querySelector("slot");
     this.$button = this._shadowRoot.querySelector("button");
 
     const firstChild = this.$children?.assignedNodes()[0] as Text;
-    
     this.$button!.innerText = firstChild?.textContent?.trim() || "";
-
     firstChild.textContent = "";
 
     this.addEventListener("click", (event) => {
-      event.stopPropagation();
-      this.showChildren();
-    });
-
-    this.addEventListener("click", () => {
-      if (this.handleClick)
+      if (this.handleClick) {
         this.handleClick(this.$button!.innerText);
+        this.showChildren();
+        event.stopPropagation();
+      }
     });
   }
 
   showChildren() {
-    this.$children!.style.display = this.$children!.style.display === "none" ? "block" : "none";
+    this.$children!.style.display =
+      this.$children!.style.display === "none" ? "block" : "none";
   }
 
   setCSS() {
