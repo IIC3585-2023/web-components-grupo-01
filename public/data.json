@@ -312,7 +312,15 @@
                   "price": 16000,
                   "discount": 20,
                   "rating": 4
+                },
+                {
+                  "title": "Conchas a la parmesana",
+                  "imgSrc": "https://kharma.cl/wp-content/uploads/2020/05/machas-a-la-parmesana.jpg",
+                  "price": 12000,
+                  "discount": 16,
+                  "rating": 5
                 }
+
               ]
             },
             {
