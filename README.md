@@ -19,6 +19,8 @@ The resources used for this project are:
 - Node 18.0.0
 - TypeScript
 - TailwindCSS
+- Vite
+- Lit
 
 ## How to run
 
